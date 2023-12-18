@@ -35,7 +35,7 @@ public class CarTire {
 		return modelBrand;
 	}
 
-	public void setModelBrand() {
+	public void setModelBrand(String modelBrand) {
 		if (modelBrand == null || modelBrand.length() < 3)
 			throw new RuntimeException("You must enter Model and Brand for tire!");
 		this.modelBrand = modelBrand;
@@ -46,7 +46,7 @@ public class CarTire {
 	}
 
 	public void setDiameter(int diameter) {
-		if (diameter < 13 || diameter > 22)
+		if (diameter < 13 || diameter > 25)
 			throw new RuntimeException("Diameter out of range!");
 		this.diameter = diameter;
 	}
@@ -84,7 +84,10 @@ public class CarTire {
 
 	@Override
 	public String toString() {
-		return "Car Tire [Model Brand: " + modelBrand + ", Diameter: " + diameter + ", Width: " + width + "Height: "
-				+ height + "]";
+		return "Car Tire [Model Brand: " + modelBrand + 
+				", Diameter: " + diameter + 
+				", Width: " + width + 
+				", Height: "+ height + 
+				", Winter: "+winterTire+"]";
 	}
 }
